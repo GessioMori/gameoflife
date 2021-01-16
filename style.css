@@ -269,12 +269,14 @@ input[type="radio"]:checked + label span {
   padding: 20px;
   width: 50%;
   text-align: center;
+  cursor: pointer;
 }
 
 #closeButton {
   font-size: 1.4rem;
   font-weight: bolder;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .creatorItem {
