@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gessio Mori Neto">
+    <meta name="description" content="Jogo da vida de Conway">
+    <meta name="keywords" content="conway, jogo, vida">
+
+    <title>Jogo da vida de Conway</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="icon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="about:blank">
+    
+</head>
+<body>
+    <div id="pageContainer">
+        <div id='titleDiv'><p class="titleText">Jogo da vida de Conway</p></div>
+        <div id="stageContainer">
+            <canvas id="backgroundCanvas"></canvas>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="controllerPanel">
+            <div id="buttons">
+                <div class="secondButtons">
+                    <button id="createButton" class="btn"><span class="buttonText">Criar</span></button>
+                    <button id="nextStepButton" class="btn"><span class="buttonText">Próximo</span></button>
+                </div>
+                <div class="secondButtons">
+                    <button id="refreshButton" class="btn"><span class="buttonText">Limpar</span></button>
+                    <button id="startPauseButton" class="btn"><span id = 'startPauseText' class="buttonText">Iniciar</span></button>
+                </div>
+            </div>
+            <div id="timeIntervalDiv">
+                <p class="timeIntervalText inputText" id="timeIntervalText">Período: 0.5 s</p>
+                <input type="range" id="timeInterval" min="0.1" max="2" step="0.1" class="range-slider">
+            </div>
+            <div id="lineSizeDiv">
+                <div>
+                    <p class="lineSizeText inputText">Elementos por linha:</p>
+                </div>
+                <div id="radioInputDiv">
+                    <input type="radio" id="10elements" value="10" name="elementsPerLine">
+                    <label for="10elements"><span></span>10</label>
+                    <input type="radio" id="25elements" value="25" name="elementsPerLine">
+                    <label for="25elements"><span></span>25</label>
+                    <input type="radio" id="50elements" value="50" name="elementsPerLine">
+                    <label for="50elements"><span></span>50</label>
+                    <input type="radio" id="100elements" value="100" name="elementsPerLine">
+                    <label for="100elements"><span></span>100</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='creatorDiv'>
+        <div id='creatorContent'>
+            <p id="closeButton">&#10006</p>
+            <br>
+            <p class="creatorItem" id='creator0'>Blinker</p>
+            <hr>
+            <p class="creatorItem" id='creator1'>Toad</p>
+            <hr>
+            <p class="creatorItem" id='creator2'>Beacon</p>
+            <hr>
+            <p class="creatorItem" id='creator3'>Hex-line</p>
+            <hr>
+            <p class="creatorItem" id='creator4'>Penta-decathlon</p>
+            <hr>
+            <p class="creatorItem" id='creator5'>Glider</p>
+            <hr>
+            <p class="creatorItem" id='creator6'>Aleatório</p>
+            
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="display.js"></script>
+    <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="engine.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
